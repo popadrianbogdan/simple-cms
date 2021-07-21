@@ -20,7 +20,7 @@
         "symfony-cmf/menu-bundle": "2.2.0.*",
         "symfony-cmf/content-bundle": "2.1.0",
         "doctrine/phpcr-bundle": "2.2.2",
-        "doctrine/phpcr-odm": "1.5.3"
+        "doctrine/phpcr-odm": "2.0.x"
     },
     "require-dev": {
         "symfony-cmf/testing": "^1.3",
