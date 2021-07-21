@@ -1,0 +1,45 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="cmf_simple_cms.persistence.phpcr.admin.sort">false</parameter>
+        <parameter key="cmf_simple_cms.persistence.phpcr.admin.page.class">Symfony\Cmf\Bundle\SimpleCmsBundle\Admin\PageAdmin</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="cmf_simple_cms.persistence.phpcr.admin.page"
+            class="%cmf_simple_cms.persistence.phpcr.admin.page.class%">
+
+            <tag name="sonata.admin"
+                manager_type="doctrine_phpcr"
+                group="dashboard.cmf"
+                label_catalogue="CmfSimpleCmsBundle"
+                label="dashboard.label_page"
+                label_translator_strategy="sonata.admin.label.strategy.underscore"
+            />
+
+            <argument />
+            <argument>%cmf_simple_cms.persistence.phpcr.document.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+
+            <call method="setRouteBuilder">
+                <argument type="service" id="sonata.admin.route.path_info_slashes"/>
+            </call>
+            <call method="setRouteRoot">
+                <argument>%cmf_simple_cms.persistence.phpcr.basepath%</argument>
+            </call>
+            <call method="setSortOrder">
+                <argument>%cmf_simple_cms.persistence.phpcr.admin.sort%</argument>
+            </call>
+            <call method="setControllerResolver">
+                <argument type="service" id="controller_resolver" />
+            </call>
+            <call method="setIvoryCkeditor">
+                <argument>%cmf_simple_cms.ivory_ckeditor.config%</argument>
+            </call>
+        </service>
+
+    </services>
+</container>
