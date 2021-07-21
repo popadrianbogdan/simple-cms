@@ -19,7 +19,7 @@
         "symfony-cmf/routing-bundle": "2.5.0",
         "symfony-cmf/menu-bundle": "2.2.0.*",
         "symfony-cmf/content-bundle": "2.1.0",
-        "doctrine/phpcr-bundle": "2.2.2",
+        "doctrine/phpcr-bundle": "2.x-dev",
         "doctrine/phpcr-odm": "2.0.x"
     },
     "require-dev": {
