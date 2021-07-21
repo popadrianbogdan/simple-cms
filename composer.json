@@ -16,11 +16,11 @@
     "require": {
         "php": "7.4.20",
         "symfony-cmf/core-bundle": "~1.1",
-        "symfony-cmf/routing-bundle": "~1.2",
-        "symfony-cmf/menu-bundle": "2.0.*",
-        "symfony-cmf/content-bundle": "~1.2",
-        "doctrine/phpcr-bundle": "~1.1",
-        "doctrine/phpcr-odm": "~1.2"
+        "symfony-cmf/routing-bundle": "2.5.0",
+        "symfony-cmf/menu-bundle": "2.2.0.*",
+        "symfony-cmf/content-bundle": "2.1.0",
+        "doctrine/phpcr-bundle": "2.2.2",
+        "doctrine/phpcr-odm": "1.5.3"
     },
     "require-dev": {
         "symfony-cmf/testing": "^1.3",
@@ -28,8 +28,8 @@
         "matthiasnoback/symfony-config-test": "^1.2.3",
         "sonata-project/block-bundle": "^2.2.8",
         "sonata-project/core-bundle": "^2.2.3",
-        "sonata-project/doctrine-phpcr-admin-bundle": "~1.1",
-        "symfony/monolog-bundle": "~2.3"
+        "sonata-project/doctrine-phpcr-admin-bundle": "^2.3.0",
+        "symfony/monolog-bundle": "^3.0"
     },
     "suggest": {
         "symfony-cmf/create-bundle": "to allow the admin to edit pages inline (~1.1)",
